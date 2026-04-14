@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="icon" href="favicon.ico">
+    <title>PharmaCare</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+  <div class="logo">
+    <img src="images/pharmacare.png" width="63" height="63" alt="PharmaCare">
+        <h1>PharmaCare</h1>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="checkout.html">
+    🛒 Cart (<span id="cart-count">0</span>)
+    </a></li>
+  </ul>
+</nav>
+    </header>
+
+    <div class="hero">
+    <div class="carousel">
+        <img src="images/banner1.jpg" alt="Pharmacy banner" class="slide active">
+        <img src="images/banner2.jpg" alt="Pharmacy banner" class="slide">
+        <img src="images/banner3.jpg" alt="Pharmacy banner" class="slide">
+    </div>
+
+    <h1>About PharmaCare</h1>
+    <p>Your health, our priority</p>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</div>
+
+    <main>
+
+    <h2 class="section-title">Featured Products</h2>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="images/product6.jpg" alt="Omron" class="product-img" data-caption="Omron Blood Pressure ₱1,200.00">
+            <h3>Omron Blood Pressure</h3>
+            <p class="price">₱1,200.00</p>
+            <button class="add-to-cart" data-name="Omron Blood Pressure" data-price="1200">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product7.jpg" alt="Sangobion" class="product-img" data-caption="Sangobion Forte ₱32.50">
+            <h3>Sangobion Forte</h3>
+            <p class="price">₱32.50</p>
+            <button class="add-to-cart" data-name="Sangobion Forte" data-price="32.50">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product8.jpg" alt="Centrum Silver" class="product-img" data-caption="Centrum Silver Advance ₱378.25">
+            <h3>Centrum Silver Advance</h3>
+            <p class="price">₱378.25</p>
+            <button class="add-to-cart" data-name="Centrum Silver" data-price="378.25">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product1.jpg" alt="Casino Alcohol" class="product-img" data-caption="Casino Alcohol 500ML ₱70.50">
+            <h3>Casino Alcohol 500ML</h3>
+            <p class="price">₱70.50</p>
+            <button class="add-to-cart" data-name="Casino Alcohol" data-price="70.50">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product2.jpg" alt="Muconase Spray" class="product-img" data-caption="Muconase 0.65 Spray ₱91.50">
+            <h3>Muconase 0.65 Spray</h3>
+            <p class="price">₱91.50</p>
+            <button class="add-to-cart" data-name="Muconase 0.65 Spray" data-price="91.50">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product3.jpg" alt="White Flower" class="product-img" data-caption="White Flower ₱290.50">
+            <h3>White Flower</h3>
+            <p class="price">₱290.50</p>
+            <button class="add-to-cart" data-name="white flower" data-price="290.50">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product4.jpg" alt="Guardian Kids" class="product-img" data-caption="Guardian Kids Strawberry ₱189.00">
+            <h3>Guardian Kids Strawberry</h3>
+            <p class="price">₱189.00</p>
+            <button class="add-to-cart" data-name="Guardian Kids Strawberry" data-price="189.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product5.jpg" alt="Livity Adult" class="product-img" data-caption="Livity Prime Adult Nutritional ₱1,199.00">
+            <h3>Livity Prime Adult Nutritional</h3>
+            <p class="price">₱1,199.00</p>
+            <button class="add-to-cart" data-name="Livity Prime" data-price="1199">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product9.jpg" alt="Ferix BC" class="product-img" data-caption="Ferix BC Cap 100 ₱20.00">
+            <h3>Ferix BC Cap 100</h3>
+            <p class="price">₱20.00</p>
+            <button class="add-to-cart" data-name="Ferix BC Cap 100" data-price="20.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product10.jpg" alt="Pharmaton" class="product-img" data-caption="Pharmaton Energy ₱31.00">
+            <h3>Pharmaton Energy</h3>
+            <p class="price">₱31.00</p>
+            <button class="add-to-cart" data-name="Pharmaton Energy" data-price="31.00">Add to Cart</button>
+        </div>
+    </div>
+</main>
+
+<div id="toast"></div>
+
+    <!--Lightbox section-->
+    <div id="popup" class="popup">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img id="popup-img" class="popup-img">
+    <p class="caption" id="popup-caption"></p>
+</div>
+
+    <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>Store Services</h3>
+            <ul>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">Prescription</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Customer Care</h3>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Returns</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">About PharmaCare</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+    <h3>Follow Us</h3>
+    <ul>
+        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+    </ul>
+ </div>
+</div>
+
+    <div class="footer-bottom">
+        <div class="footer-inner">
+        <p>© 2026 PharmaCare. All Rights Reserved | Terms of Use | Privacy Policy</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+    </body>
+</html>

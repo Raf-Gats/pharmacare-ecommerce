@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="icon" href="favicon.ico">
+    <title>Contact / Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+</style>
+<body>
+    <header>
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/pharmacare.png" width="63" height="63" alt="PharmaCare">
+    <h1>PharmaCare</h1>
+    </div>
+    <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="checkout.html">
+    🛒 Cart (<span id="cart-count">0</span>)
+    </a></li>
+  </ul>
+</nav>
+    </header>
+    <div id="toast"></div>
+    
+<div class="contact-container">
+
+    <h1>Order Information</h1>
+
+    <form id="order-form" class="contact-form">
+
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Phone Number</label>
+        <input type="tel" required>
+
+        <label>Address</label>
+        <textarea required></textarea>
+
+        <label>Email</label>
+        <input type="email">
+
+        <label>Message</label>
+        <input type="text">
+
+        <label>Payment Method</label>
+        <select>
+            <option>Cash on Delivery</option>
+            <option>Online Payment</option>
+        </select>
+
+        <button type="submit">Place Order</button>
+
+    </form>
+
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>Store Services</h3>
+            <ul>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">Prescription</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Customer Care</h3>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Returns</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">About PharmaCare</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+    <h3>Follow Us</h3>
+    <ul>
+        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+    </ul>
+ </div>
+</div>
+
+    <div class="footer-bottom">
+        <div class="footer-inner">
+        <p>© 2026 PharmaCare. All Rights Reserved | Terms of Use | Privacy Policy</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.getElementById("order-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Order placed successfully ✅ We will contact you soon!");
+});
+</script>
+
+</body>
+</html>
