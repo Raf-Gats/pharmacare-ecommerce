@@ -548,3 +548,33 @@ footer {
     margin-top: 3px;
     color: red;
 }
+
+body {
+    font-family: Arial, sans-serif;
+}    
+.calculator label,
+.calculator input,
+.calculator button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+.label-monthly {
+    color: blue;
+    font-weight: bold;
+}
+.label-yearly {
+    color: green;
+    font-weight: bold;
+}
+.calculator {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
