@@ -301,12 +301,30 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
   document.getElementById("yearly").textContent = yearly.toFixed(2);
 }
 
-const resetButton = document.getElementById('resetButton');
+function resetAll() {
+  // Clear inputs
+  document.getElementById("price").value = "";
+  document.getElementById("rate").value = "";
+  document.getElementById("years").value = "";
+  document.getElementById("usd").value = "";
 
-// Add an event listener to reset button to refresh the page
-resetButton.addEventListener('click', function () {
-    location.reload(); // Refresh the page
-});
+  // Reset results
+  document.getElementById("total").innerText = "0";
+  document.getElementById("monthly").innerText = "0";
+  document.getElementById("yearly").innerText = "0";
+  document.getElementById("result").innerText = "";
+}
+
+function convert() {
+    let usd = document.getElementById("usd").value;
+
+    let rate = 60.2; 
+
+    let php = usd * rate;
+
+    document.getElementById("result").innerText =
+        "PHP: " + php.toFixed(2);
+}   
 
 // =========================
 // CLICK THUMBNAIL → CHANGE MAIN IMAGE
